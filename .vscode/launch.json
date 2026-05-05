@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CirclO - Interactive App (SocialDemoApp)",
+            "request": "launch",
+            "mainClass": "database.SocialDemoApp",
+            "projectName": "circlo-social-platform",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "CirclO - Run All Tests (ComprehensiveTestApp)",
+            "request": "launch",
+            "mainClass": "database.ComprehensiveTestApp",
+            "projectName": "circlo-social-platform"
+        }
+    ]
+}

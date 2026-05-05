@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CirclO Social Platform - Project Demo</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+        h1, h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #3498db; color: white; }
+        pre { background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        .demo { background: #e8f4f8; padding: 20px; border-left: 5px solid #3498db; margin: 20px 0; }
+        .status { color: green; font-weight: bold; }
+        .warning { color: orange; }
+        ul { padding-left: 20px; }
+    </style>
+</head>
+<body>
+    <h1>🏢 CirclO Social Platform</h1>
+    <p><strong>Java JDBC MySQL Social App</strong> | <em>Team: Dushan (014312454) & Tran (017005482)</em></p>
+    
+    <h2>📋 Status: <span class="status">100% Complete & Tested</span></h2>
+    <div class="demo">
+        <h3>Quick Demo</h3>
+        <ul>
+            <li><strong>DB</strong>: 5 tables, 20+ rows each ✓</li>
+            <li><strong>Code</strong>: JDBC CRUD (login/post/react/feed) ✓</li>
+            <li><strong>Tests</strong>: ComprehensiveTestApp/TestApp/SocialDemoApp ✓</li>
+            <li><strong>Files</strong>: create_schema.sql, initialize_data.sql, FINAL_REPORT.md, README.md</li>
+        </ul>
+        <p><strong>Run:</strong> <code>cd CircloDemo.java && mvn clean compile exec:java -Dexec.mainClass="database.SocialDemoApp"</code></p>
+        <p><strong>Login:</strong> alice/pass123 → Post "photo.jpg" → React "like" post ID 1</p>
+    </div>
+
+    <h2>📊 Database Schema</h2>
+    <table>
+        <tr><th>Table</th><th>PK</th><th>Key Fields</th><th>Constraints</th></tr>
+        <tr><td>Users</td><td>user_id</td><td>username<em>unique</em>, email<em>unique</em>, password</td><td>NOT NULL</td></tr>
+        <tr><td>Posts</td><td>post_id</td><td>user_id<em>FK</em>, content</td><td>CASCADE DELETE</td></tr>
+        <tr><td>Comments</td><td>comment_id</td><td>post_id<em>FK</em>, user_id<em>FK</em></td><td>CASCADE</td></tr>
+        <tr><td>Reactions</td><td>reaction_id</td><td>post_id<em>FK</em>, user_id<em>unique</em>, type</td><td>like/dislike</td></tr>
+        <tr><td>Connections</td><td>connection_id</td><td>requester_id<em>FK</em>, receiver_id<em>unique</em></td><td>status: pending/accepted</td></tr>
+    </table>
+
+    <h2>✅ Matches All Requirements</h2>
+    <ul>
+        <li>Primary Goals: JDBC CRUD, 3-tier ✓</li>
+        <li>Key Features: Auth, Post/Feed, Reactions ✓</li>
+        <li>3-Tier: Console/DAOs/DB ✓</li>
+        <li>DB: BCNF, diagram, 20 rows/table ✓</li>
+        <li>Func Reqs: Add/View/Update/Delete ✓</li>
+        <li>Code Snippets/Error Handling ✓</li>
+        <li>Tests: Comprehensive + Interactive ✓</li>
+        <li>SQL Scripts/README ✓</li>
+    </ul>
+
+    <h2>🚀 Test Commands</h2>
+    <pre>cd CircloDemo.java
+mvn clean compile
+mvn exec:java -Dexec.mainClass="database.ComprehensiveTestApp"
+mvn exec:java -Dexec.mainClass="database.TestApp"
+mvn exec:java -Dexec.mainClass="database.SocialDemoApp"  # Interactive: tran/12345</pre>
+
+    <h2>📄 Full Report</h2>
+    <p>See <a href="FINAL_REPORT.md">FINAL_REPORT.md</a> for BCNF, snippets, tests.</p>
+
+    <footer>
+        <p>✅ Ready for submission | Maven jar: <code>mvn package</code></p>
+    </footer>
+</body>
+</html>
+
