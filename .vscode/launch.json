@@ -7,14 +7,23 @@
             "request": "launch",
             "mainClass": "database.SocialDemoApp",
             "projectName": "circlo-social-platform",
-            "console": "integratedTerminal"
+            "console": "externalTerminal"
         },
         {
             "type": "java",
-            "name": "CirclO - Run All Tests (ComprehensiveTestApp)",
+            "name": "CirclO - Automated Test Suite",
             "request": "launch",
             "mainClass": "database.ComprehensiveTestApp",
-            "projectName": "circlo-social-platform"
+            "projectName": "circlo-social-platform",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
+            "name": "CirclO - Connection Test",
+            "request": "launch",
+            "mainClass": "database.TestApp",
+            "projectName": "circlo-social-platform",
+            "console": "externalTerminal"
         }
     ]
 }
